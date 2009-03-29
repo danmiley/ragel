@@ -1,3 +1,4 @@
+
 INCLUDES = -I../aapl
 
 bin_PROGRAMS = ragel
@@ -12,7 +13,19 @@ ragel_SOURCES = \
 	cstable.cpp csftable.cpp csflat.cpp csfflat.cpp csgoto.cpp csfgoto.cpp \
 	csipgoto.cpp cssplit.cpp dotcodegen.cpp xmlcodegen.cpp
 
-BUILD_PARSERS = @BUILD_PARSERS@
+BUILT_SOURCES = \
+	rlscan.cpp rlparse.h rlparse.cpp version.h
+
+CLEANFILES = \
+	rlscan.cpp rlparse.h rlparse.cpp
+
+# Get the version info.
+include ../version.mk
+
+version.h: ../version.mk
+	echo '#define VERSION "$(VERSION)"' > version.h
+	echo '#define PUBDATE "$(PUBDATE)"' >> version.h
+	echo '#define PREFIX "$(prefix)"' >> version.h
 
 if BUILD_PARSERS
 
