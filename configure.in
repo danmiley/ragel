@@ -1,5 +1,5 @@
 dnl 
-dnl   Copyright 2001-2006 Adrian Thurston <thurston@complang.org>
+dnl   Copyright 2001-2009 Adrian Thurston <thurston@complang.org>
 dnl
 
 dnl   This file is part of Ragel.
@@ -18,8 +18,12 @@ dnl   You should have received a copy of the GNU General Public License
 dnl   along with Ragel; if not, write to the Free Software
 dnl   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA 
   
-AC_INIT(ragel/main.cpp)
+AC_INIT(ragel, 6.4)
+AM_INIT_AUTOMAKE
+
 AC_CONFIG_HEADER(ragel/config.h)
+
+AM_CONDITIONAL(BUILD_PARSERS, [test "x$enable_parsers" = "xyes"])
 
 dnl Set to true if the build system should generate parsers from ragel and kelbt
 dnl sources. Set to false if generated files are included and not to be built

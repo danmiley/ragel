@@ -23,14 +23,15 @@
 #define _CONFIG_H
 
 /* Programs. */
-#undef GDC
-#undef GOBJC
-#undef CXX
-#undef CC
-#undef JAVAC
-#undef TXL
-#undef RUBY
-#undef GMCS
+
+/* #undef GDC */
+/* #undef GOBJC */
+/* #undef CXX */
+/* #undef CC */
+/* #undef JAVAC */
+/* #undef TXL */
+/* #undef RUBY */
+/* #undef GMCS */
 
 #ifdef _MSC_VER
 #define strtoll _strtoi64
