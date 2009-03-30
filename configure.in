@@ -23,13 +23,11 @@ AM_INIT_AUTOMAKE
 
 AC_CONFIG_HEADER(ragel/config.h)
 
-enable_parsers=yes;
-AM_CONDITIONAL(BUILD_PARSERS, [test "x$enable_parsers" = "xyes"])
-
 dnl Set to true if the build system should generate parsers from ragel and kelbt
 dnl sources. Set to false if generated files are included and not to be built
 dnl (production).
-#AC_SUBST(BUILD_PARSERS,true)
+build_parsers=yes;
+AM_CONDITIONAL(BUILD_PARSERS, [test "x$build_parsers" = "xyes"])
 
 dnl Checks for programs.
 AC_PROG_CC
