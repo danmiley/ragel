@@ -113,6 +113,6 @@ AC_CHECK_PROG(GMCS, gmcs, gmcs)
 #fi
 
 dnl write output files
-AC_OUTPUT(Makefile ragel/Makefile doc/Makefile test/Makefile)
+AC_OUTPUT(Makefile ragel/Makefile aapl/Makefile doc/Makefile test/Makefile)
 
 echo "configuration of ragel complete"

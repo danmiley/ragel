@@ -4,6 +4,13 @@ INCLUDES = -I../aapl
 bin_PROGRAMS = ragel
 
 ragel_SOURCES = \
+	buffer.h cdgoto.h cscodegen.h csipgoto.h inputdata.h rbxgoto.h \
+	rubyflat.h cdcodegen.h cdipgoto.h csfflat.h cssplit.h javacodegen.h \
+	redfsm.h rubyftable.h cdfflat.h cdsplit.h csfgoto.h cstable.h \
+	parsedata.h rlparse.h rubytable.h cdfgoto.h cdtable.h csflat.h \
+	dotcodegen.h parsetree.h rlscan.h version.h cdflat.h common.h \
+	csftable.h fsmgraph.h pcheck.h rubycodegen.h xmlcodegen.h cdftable.h \
+	csgoto.h gendata.h ragel.h rubyfflat.h \
 	main.cpp parsetree.cpp parsedata.cpp fsmstate.cpp fsmbase.cpp \
 	fsmattach.cpp fsmmin.cpp fsmgraph.cpp fsmap.cpp rlscan.cpp rlparse.cpp \
 	inputdata.cpp common.cpp redfsm.cpp gendata.cpp cdcodegen.cpp \
